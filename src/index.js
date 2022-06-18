@@ -43,6 +43,7 @@ class Board extends React.Component {
     render() {
     return (
         <div>
+            <h1>Tic Tac Toe</h1>
         <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -83,7 +84,8 @@ class Game extends React.Component {
     }
 
     handleClick(i) {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    // O slice faz uma cópia de um array
+    const history = this.state.history.slice(0, this.state.stepNumber + 1); 
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
@@ -107,7 +109,7 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
         const desc = move ?
-            'Go to move #' + move :
+            'Go to move ' + move :
             'Go to game start';
         return (
         <li key={move}>
