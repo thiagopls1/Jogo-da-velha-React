@@ -2,25 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
 
-// class Square extends React.Component {
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//             value: null,
-//         };
-//     }
-
-//     render() {
-//         return (
-//             <button 
-//             className="square" 
-//             onClick={() => {this.props.onClick()}}>
-//                 {this.props.value}
-//             </button>
-//         );
-//     }
-// }
-
 /* É possível trocar a class Square por uma função */
 function Square(props) {
     return (
